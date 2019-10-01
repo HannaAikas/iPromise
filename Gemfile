@@ -35,7 +35,7 @@ group :development, :test do
   gem 'simplecov'
   gem 'simplecov-console'
   gem 'rubocop'
-  gem 'rubocop-rails'
+  # gem 'rubocop-rails'
 end
 
 group :development do

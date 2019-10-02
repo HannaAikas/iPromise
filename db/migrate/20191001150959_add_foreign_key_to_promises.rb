@@ -1,5 +1,5 @@
 class AddForeignKeyToPromises < ActiveRecord::Migration[6.0]
   def change
-    add_foreign_key :promises, :users
+    add_reference :promises, :users, foreign_key: true
   end
 end

@@ -1,8 +1,7 @@
 class User < ApplicationRecord
   include Clearance::User
+  has_many :promises
 
-  include Clearance::User
-  
   validates :mobileNumber, presence: true, uniqueness: true
 
 end

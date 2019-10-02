@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+gem "clearance"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -36,6 +37,10 @@ group :development, :test do
   gem 'simplecov-console'
   gem 'rubocop'
   # gem 'rubocop-rails'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'capybara', '~> 2.13'
+  gem 'selenium-webdriver'
 end
 
 group :development do

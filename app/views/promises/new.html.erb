@@ -1,0 +1,11 @@
+<h2>Create a new promise</h2>
+
+<%= form_for :promise, url: promises_path do |form| %>
+  <%= form.label :text %>
+  <%= form.text_field :text %>
+
+  <%= form.label :interval %>
+  <%= form.text_field :
+  <%= form.submit 'Submit' %>
+<% end %>
+<%= link_to 'Back', promises_path %>

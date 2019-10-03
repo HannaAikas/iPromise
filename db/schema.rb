@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_02_091321) do
+ActiveRecord::Schema.define(version: 2019_10_02_225210) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,9 @@ ActiveRecord::Schema.define(version: 2019_10_02_091321) do
     t.string "confirmation_token", limit: 128
     t.string "remember_token", limit: 128, null: false
     t.integer "mobile"
+    t.string "firstname"
     t.index ["email"], name: "index_users_on_email"
+    t.index ["firstname"], name: "index_users_on_firstname"
     t.index ["mobile"], name: "index_users_on_mobile"
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end

@@ -15,6 +15,16 @@ ActiveRecord::Schema.define(version: 2019_10_02_091321) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "promises", force: :cascade do |t|
+    t.text "text"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "end_datetime"
+    t.interval "interval"
+    t.bigint "users_id"
+    t.index ["users_id"], name: "index_promises_on_users_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -28,4 +38,5 @@ ActiveRecord::Schema.define(version: 2019_10_02_091321) do
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
+  add_foreign_key "promises", "users", column: "users_id"
 end

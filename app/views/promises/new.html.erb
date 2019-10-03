@@ -1,11 +1,15 @@
 <h2>Create a new promise</h2>
 
 <%= form_for :promise, url: promises_path do |form| %>
-  <%= form.label :text %>
+  <%= form.label :text, 'Enter your promise here:' %>
   <%= form.text_field :text %>
-
-  <%= form.label :interval %>
-  <%= form.text_field :
+  <br>
+  <%= form.label :interval, 'How often do you want to receive reminder?' %>
+  <%= form.text_field :interval, :value => '1 day'%>
+  <br>
+  <%= form.label :end_datetime, 'End date:'%>
+  <%= form.text_field :end_datetime, :value => '31/01/2019'%>
+  <br>
   <%= form.submit 'Submit' %>
 <% end %>
 <%= link_to 'Back', promises_path %>

@@ -9,4 +9,13 @@ RSpec.describe PromisesController, type: :controller do
     end
   end
 
+  describe "POST #create" do
+    it "save a new entry to the 'promise' database" do
+      post :create, params:{ promise: { text: 'test promise',
+                                        end_datetime: '31/01/2019',
+                                        interval: '1 day'}}
+      expect(Promise.find_by(text: 'test promise')).to be_truthy
+    end
+  end
+
 end

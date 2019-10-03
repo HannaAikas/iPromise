@@ -6,6 +6,6 @@ FactoryBot.define do
   factory :user do
     email
     password { "password" }
-    mobileNumber { 07500000000 }
+    mobile { 07500000000 }
   end
 end

@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   
   def index
   end
-  # def promise
-  # end 
+  
+  def promise
+  end 
 end

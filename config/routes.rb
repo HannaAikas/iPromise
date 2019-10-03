@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
-  resource :session, controller: "sessions", only: [:create]
+  resource :session, controller: "clearance/sessions", only: [:create]
 
   resources :users, controller: "users", only: [:create] do
     resource :password,
@@ -12,8 +12,10 @@ Rails.application.routes.draw do
   delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
   get "/sign_up" => "users#new", as: "sign_up"
   get 'home/index'
-  
-  root "users#new"
+  resources :promises 
+
+
+  root "promises#index"
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

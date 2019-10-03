@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_02_225210) do
+ActiveRecord::Schema.define(version: 2019_10_01_150959) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "promises", force: :cascade do |t|
+    t.text "text"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "end_datetime"
+    t.interval "interval"
+    t.bigint "users_id"
+    t.index ["users_id"], name: "index_promises_on_users_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -22,12 +33,13 @@ ActiveRecord::Schema.define(version: 2019_10_02_225210) do
     t.string "encrypted_password", limit: 128, null: false
     t.string "confirmation_token", limit: 128
     t.string "remember_token", limit: 128, null: false
-    t.integer "mobile"
     t.string "firstname"
+    t.string "mobile"
     t.index ["email"], name: "index_users_on_email"
     t.index ["firstname"], name: "index_users_on_firstname"
     t.index ["mobile"], name: "index_users_on_mobile"
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
+  add_foreign_key "promises", "users", column: "users_id"
 end

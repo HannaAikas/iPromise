@@ -1,13 +1,14 @@
 class UsersController < Clearance::UsersController
 
   def create
-    @user = user_from_params 
-    
-    render template: 'users/new'
-  end
+    @user = user_from_params
 
-  def show
-    @users = User.all
+    if @user.save!
+      sign_in @user
+      redirect_back_or url_after_create
+    else
+      render template: 'users/new'
+    end
   end
 
   private

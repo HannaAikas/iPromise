@@ -27,7 +27,7 @@ module Features
       visit sign_up_path
       fill_in "user_email", with: email
       fill_in "user_password", with: password
-      fill_in "user_mobileNumber", with: mobile
+      fill_in "user_mobile", with: mobile
       click_button I18n.t("helpers.submit.user.create")
     end
 

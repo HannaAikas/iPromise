@@ -1,16 +1,33 @@
+  require 'pg'
+  require 'twilio-ruby'
+  require_relative '../../twilio_tokens'
 
-  # def account_info
-  #   account_sid = TWILIO_ACCOUNT_SID
-  #   auth_token = TWILIO_AUTH_TOKEN
-    
-  #   # set up a client to talk to the Twilio REST API
-  #   @client = Twilio::REST::Client.new account_sid, auth_token
-  # end
+  attr_reader :name
+
+  def intialize(name:)
+    @name = name
+  end
+  
+  def get_info
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'iPromise_test')
+    else
+      connection = PG.connect(dbname: 'iPromise_development')
+    end
+
+    result = connection.exec("SELECT * FROM promises")
+    p results
+    result.map do |promise|
+      end_date = DateTime.parse(promise['end_datetime']).to_date
+      current_date = DateTime.now.to_date
+      if end_date == current_date
+        print promise['users_id']
+      end
+    end
+  end
+
 
   def send_a_text
-    require 'twilio-ruby'
-    require_relative '../../twilio_tokens'
-    
     account_sid = TWILIO_ACCOUNT_SID
     auth_token = TWILIO_AUTH_TOKEN
     
@@ -24,3 +41,5 @@
       click https://www.google.com for YES or https://www.google.com for NO'
     ) 
   end
+ # firstname:
+ # mobile:

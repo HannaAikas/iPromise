@@ -1,11 +1,6 @@
 class PromisesController < ApplicationController
   before_action :require_login
 
-  def index
-    @user = User.find(current_user.id)
-    @promises = @user.promises
-  end
-
   def new
   end
 

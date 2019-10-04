@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 2019_10_02_225210) do
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "end_datetime"
     t.interval "interval"
-    t.bigint "users_id"
-    t.index ["users_id"], name: "index_promises_on_users_id"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_promises_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -40,5 +40,5 @@ ActiveRecord::Schema.define(version: 2019_10_02_225210) do
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
-  add_foreign_key "promises", "users", column: "users_id"
+  add_foreign_key "promises", "users"
 end

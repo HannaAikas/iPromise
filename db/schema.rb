@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2019_10_02_192649) do
-
+ActiveRecord::Schema.define(version: 2019_10_02_225210) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +19,6 @@ ActiveRecord::Schema.define(version: 2019_10_02_192649) do
     t.text "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-
     t.datetime "end_datetime"
     t.interval "interval"
     t.bigint "users_id"
@@ -35,8 +32,8 @@ ActiveRecord::Schema.define(version: 2019_10_02_192649) do
     t.string "encrypted_password", limit: 128, null: false
     t.string "confirmation_token", limit: 128
     t.string "remember_token", limit: 128, null: false
-    t.string "firstname"
     t.string "mobile"
+    t.string "firstname"
     t.index ["email"], name: "index_users_on_email"
     t.index ["firstname"], name: "index_users_on_firstname"
     t.index ["mobile"], name: "index_users_on_mobile"

@@ -1,16 +1,27 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/chuancheng/makers_academy/iPromise/spec/controllers/home_controller_spec.rb": [
+      "/Users/chuancheng/makers_academy/iPromise/spec/controllers/promises_controller_spec.rb": [
         1,
         null,
         1,
         null,
-        2,
+        1,
+        null,
+        3,
         null,
         1,
         1,
         1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
         1,
         null,
         null,
@@ -311,17 +322,33 @@
       "/Users/chuancheng/makers_academy/iPromise/spec/factories/clearance.rb": [
         1,
         1,
-        2,
+        3,
         null,
         null,
         1,
         1,
-        2,
-        6,
+        3,
+        7,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/chuancheng/makers_academy/iPromise/spec/factories/promises.rb": [
+        1,
+        null,
         null,
         null
       ],
       "/Users/chuancheng/makers_academy/iPromise/config/routes.rb": [
+        1,
+        null,
+        null,
         1,
         1,
         1,
@@ -346,7 +373,7 @@
         1,
         null
       ],
-      "/Users/chuancheng/makers_academy/iPromise/app/helpers/home_helper.rb": [
+      "/Users/chuancheng/makers_academy/iPromise/app/helpers/promises_helper.rb": [
         1,
         null
       ],
@@ -359,13 +386,30 @@
         1,
         null
       ],
-      "/Users/chuancheng/makers_academy/iPromise/app/controllers/home_controller.rb": [
+      "/Users/chuancheng/makers_academy/iPromise/app/controllers/promises_controller.rb": [
         1,
         1,
         null,
         1,
         null,
         null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        3,
         null,
         null
       ],
@@ -401,7 +445,9 @@
         0,
         0,
         0,
+        0,
         null,
+        0,
         0,
         0,
         0,
@@ -418,9 +464,9 @@
         1,
         1,
         1,
-        1,
+        0,
         null,
-        1,
+        0,
         null,
         null
       ],
@@ -447,24 +493,24 @@
         null,
         null,
         1,
-        1,
+        0,
         null,
         null,
         1,
         0,
         0,
         0,
+        0,
+        0,
+        null,
+        null,
+        1,
         0,
         0,
         null,
         null,
         1,
         2,
-        2,
-        null,
-        null,
-        1,
-        3,
         null,
         null,
         1,
@@ -557,14 +603,14 @@
         1,
         1,
         null,
-        1,
+        0,
         null,
         null,
         1,
         1,
         1,
         null,
-        1,
+        0,
         null,
         null,
         1,
@@ -677,7 +723,7 @@
         null,
         null
       ],
-      "/Users/chuancheng/makers_academy/iPromise/spec/helpers/home_helper_spec.rb": [
+      "/Users/chuancheng/makers_academy/iPromise/spec/helpers/promises_helper_spec.rb": [
         1,
         null,
         null,
@@ -690,8 +736,8 @@
         null,
         null,
         null,
-        null,
-        null,
+        1,
+        1,
         null
       ],
       "/Users/chuancheng/makers_academy/iPromise/spec/helpers/users_helper_spec.rb": [
@@ -718,11 +764,11 @@
         null,
         null
       ],
-      "/Users/chuancheng/makers_academy/iPromise/spec/views/home/index.html.erb_spec.rb": [
+      "/Users/chuancheng/makers_academy/iPromise/spec/views/promises/index.html.erb_spec.rb": [
         1,
         null,
-        null,
-        null,
+        1,
+        1,
         null
       ],
       "/Users/chuancheng/makers_academy/iPromise/app/models/user.rb": [
@@ -732,10 +778,24 @@
         null,
         1,
         1,
+        null
+      ],
+      "/Users/chuancheng/makers_academy/iPromise/app/models/promise.rb": [
         1,
+        1,
+        null
+      ],
+      "/Users/chuancheng/makers_academy/iPromise/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1570096472
+    "timestamp": 1570183473
   }
 }

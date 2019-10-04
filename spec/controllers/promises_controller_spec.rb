@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe PromisesController, type: :controller do
 
+  let(:user) { FactoryBot.create(:user) }
+
+  before(:each){ sign_in }
+
   describe "GET #index" do
     it "returns http success" do
       get :index

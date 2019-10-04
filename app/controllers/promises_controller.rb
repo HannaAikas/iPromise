@@ -1,4 +1,6 @@
 class PromisesController < ApplicationController
+  before_action :require_login
+
   def index
   end
 
@@ -6,17 +8,18 @@ class PromisesController < ApplicationController
   end
 
   def create
-    promise_text = promise_params['text']
-    promise_end_date = promise_params['end_datetime']
-    promise_interval = promise_params['interval']
-
     @promise = Promise.new
     @promise.text = promise_params.delete(:text)
     @promise.end_datetime = promise_params.delete(:end_datetime)
     @promise.interval = promise_params.delete(:interval)
-    @promise.user_id = current_user.id
+    p current_user.id
+    @promise.users_id = current_user.id
     @promise.save!
 
     redirect_to promises_path
+  end
+
+  def promise_params
+    params.require(:promise).permit(:text, :end_datetime, :interval)
   end
 end

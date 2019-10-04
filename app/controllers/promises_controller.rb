@@ -2,6 +2,8 @@ class PromisesController < ApplicationController
   before_action :require_login
 
   def index
+    @user = User.find(current_user.id)
+    @promises = @user.promises
   end
 
   def new
@@ -12,8 +14,7 @@ class PromisesController < ApplicationController
     @promise.text = promise_params.delete(:text)
     @promise.end_datetime = promise_params.delete(:end_datetime)
     @promise.interval = promise_params.delete(:interval)
-    p current_user.id
-    @promise.users_id = current_user.id
+    @promise.user_id = current_user.id
     @promise.save!
 
     redirect_to promises_path

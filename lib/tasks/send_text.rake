@@ -3,6 +3,6 @@ namespace :custom do
 
   task :send_text do
     require_relative '../../app/models/send_text'
-    send_a_text
+    get_info_and_send_text
   end
 end

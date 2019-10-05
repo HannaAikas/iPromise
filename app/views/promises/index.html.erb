@@ -1,2 +1,10 @@
 <h1>Promises#index</h1>
 <p>Find me in app/views/promises/index.html.erb</p>
+
+<ul>
+    <% @promises.each do |promise| %>
+    <li><%= promise.text %></li>
+    <% end %>
+</ul>
+
+<%= link_to 'create a new promise', new_promise_path %>

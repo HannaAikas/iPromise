@@ -11,12 +11,7 @@ FactoryBot.define do
     email
     password { "password" }
     mobile { '07500000000' }
+    firstname { 'test_name' }
   end
 
-  # factory :promise do
-  #   user
-  #   text { 'default promise'}
-  #   end_datetime { '31/01/2018' }
-  #   interval { '2 days' }
-  # end
 end

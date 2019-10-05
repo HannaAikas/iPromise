@@ -2,6 +2,9 @@ require 'pg'
 require 'twilio-ruby'
 require_relative '../../twilio_tokens'
 
+class SendText 
+end
+
 def get_info_and_send_text
   if ENV['ENVIRONMENT'] == 'test'
     connection = PG.connect(dbname: 'iPromise_test')

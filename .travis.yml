@@ -3,6 +3,8 @@ rvm:
 - 2.6.3
 services:
 - postgresql
+addons:
+  postgresql: "11.4"
 install:
 - bundle install
 - bundle exec rails db:create

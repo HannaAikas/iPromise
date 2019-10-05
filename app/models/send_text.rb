@@ -25,19 +25,21 @@ def get_info_and_send_text
   end
 
   relevant_user_name = ""
+  relevant_user_mobile = ""
 
   relevant_user_ids.each do |id|
     details_of_user = connection.exec("SELECT * FROM users WHERE id='#{id}'")
     details_of_user.map do |detail|
       relevant_user_name = detail['firstname']
+      relevant_user_mobile = "+44" + detail['mobile'][1..-1]
     end
   end
 
-  send_a_text(relevant_user_name)
+  send_a_text(relevant_user_name, relevant_user_mobile)
 
 end
 
-def send_a_text(user_name)
+def send_a_text(user_name, user_mobile)
   account_sid = ENV['TWILIO_ACCOUNT_SID']
   auth_token = ENV['TWILIO_AUTH_TOKEN']
 
@@ -46,7 +48,7 @@ def send_a_text(user_name)
 
   @client.messages.create(
     from: '+441442800614', # Your Twilio number
-    to: '+447737700102', # Your mobile phone number
+    to: user_mobile, # User's mobile phone number
     body: "Hey there #{user_name}! Have you kept your promise?
     If YES, click: https://www.google.com
     or

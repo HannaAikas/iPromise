@@ -1,5 +1,6 @@
 class PromisesController < ApplicationController
   before_action :require_login
+<<<<<<< HEAD
   # def new
     
   # end
@@ -9,6 +10,15 @@ class PromisesController < ApplicationController
 
     @promise = User.find(current_user.id)
     @promise = Promise.all
+=======
+
+  def index
+    @user = User.find(current_user.id)
+    @promises = @user.promises
+  end
+
+  def new
+>>>>>>> b906689df1656d312700e2055073f801624d4f01
   end
 
   def create

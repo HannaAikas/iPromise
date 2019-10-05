@@ -13,20 +13,17 @@ def get_info_and_send_text
 
   all_promises = connection.exec("SELECT * FROM promises")
 
-  # HARD CODED BELOW FOR NOW - REMEMBER TO REPLACE WITH = [] !!!!!!!!!!!!!!
-  relevant_user_ids = [1]
-
+  relevant_user_ids = []
   all_promises.map do |promise|
     end_date = DateTime.parse(promise['end_datetime']).to_date
     current_date = DateTime.now.to_date
     if end_date == current_date
-      relevant_user_ids << promise['users_id']
+      relevant_user_ids << promise['user_id']
     end
   end
 
   relevant_user_name = ""
   relevant_user_mobile = ""
-
   relevant_user_ids.each do |id|
     details_of_user = connection.exec("SELECT * FROM users WHERE id='#{id}'")
     details_of_user.map do |detail|

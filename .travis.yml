@@ -5,8 +5,8 @@ services:
 - postgresql
 install:
 - bundle install
-- bundle exec rails db:create
-- bundle exec rails db:migrate
+- RAILS_ENV=test bundle exec rake db:create
+- RAILS_ENV=test bundle exec rake db:migrate
 script:
 - bundle exec rspec
 secure: U4BTQzX6eImeKd2ehNQFuBfqgN3L4FK8KrNskWyAdaF+RFdiOWR102GMiF2qNa/igBiBEMFb4OVTlis7DOIcg4FVFe40ZDKUXaCjp4Za/K79y6wh5LqrFONNMRxcGGO/+zd0WhPVozkh/Ani3d75BAP8bqAXZeZl0if/RxN2vubXaiRW5XQ6l9WZBZgxZ4ruiq/XDplBABxO+8g2+2DZGuKXglB2cXFMUMkkgWF0TsU3XyIrs+5WMSevZNAxkGX8dY6FkN3ZEryR3oVA+4HH34VGv+s9bnyc+3dlKq5bfE1uHgERxGQonolkYmjwGQXp6FDWzHe3vhY4oLiLKFwxZyxOrBhaZl5ORKYep9hVl3CTBz7AbUa+sFyFZ3nm7MTSuelri4m4AgoVNqNI7HfxMxMD9qExAx6EbBt1bz8pAHmqMq7gSeG7/Lu5FabkyHIrXcmBGPKt6o44WZhHP6Iuvn6RuJ93byyzzubUBjgFO1yzIBAKPRJeqTu4lGbq73gysWVVzNJ3fAnExd3wVwWJ6qB5wc1olg5nV5gONsDR/K8HYAiNO3JYh+htADKO/XLGlwfgRehdFBaEgI/uIIC673Yt8aVQfWB6wPATzkirhh1wBuK0FiuJUvK/QsViNEsoJB5ModY5SiYL52QNqDWkUXDTD+aB2ihha98Gv8J6AzY=

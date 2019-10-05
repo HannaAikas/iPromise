@@ -1,8 +1,7 @@
 require 'pg'
 require 'twilio-ruby'
-require_relative '../../twilio_tokens'
 
-class SendText 
+class SendText
 end
 
 def get_info_and_send_text
@@ -39,8 +38,8 @@ def get_info_and_send_text
 end
 
 def send_a_text(user_name)
-  account_sid = TWILIO_ACCOUNT_SID
-  auth_token = TWILIO_AUTH_TOKEN
+  account_sid = ENV['TWILIO_ACCOUNT_SID']
+  auth_token = ENV['TWILIO_AUTH_TOKEN']
 
   # set up a client to talk to the Twilio REST API
   @client = Twilio::REST::Client.new(account_sid, auth_token)

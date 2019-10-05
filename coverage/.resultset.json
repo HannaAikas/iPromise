@@ -732,7 +732,6 @@
       "/Users/hannaaikas/Projects/iPromise/app/models/send_text.rb": [
         1,
         1,
-        1,
         null,
         1,
         null,
@@ -789,10 +788,6 @@
         null,
         1,
         null
-      ],
-      "/Users/hannaaikas/Projects/iPromise/twilio_tokens.rb": [
-        1,
-        1
       ],
       "/Users/hannaaikas/Projects/iPromise/spec/views/home/index.html.erb_spec.rb": [
         1,
@@ -812,6 +807,6 @@
         null
       ]
     },
-    "timestamp": 1570271819
+    "timestamp": 1570276712
   }
 }

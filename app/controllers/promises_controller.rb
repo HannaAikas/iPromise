@@ -1,25 +1,28 @@
 class PromisesController < ApplicationController
+  before_action :require_login
   # def new
     
   # end
 
   def index
-    # session[:host_user_id] = current_user.id
-    # @user = User.find(current_user.id)
+    # @promises = Promise.all
 
-    # puts "DEBUG: #{@user.promises}"
-    @promises = Promise.all
-    # puts "DEBUG2: #{@user.promises[0]}"
+    @promise = User.find(current_user.id)
+    @promise = Promise.all
   end
 
-  # def create
-  #   @promise = Promise.new(params.require(:promise).permit(:text)) 
-  #   @promise.save!
+  def create
+    @promise = Promise.new
+    @promise.text = promise_params.delete(:text)
+    @promise.end_datetime = promise_params.delete(:end_datetime)
+    @promise.interval = promise_params.delete(:interval)
+    @promise.user_id = current_user.id
+    @promise.save!
 
-  #   redirect_to @promise 
-  # end
+    redirect_to promises_path
+  end
 
-  # def show
-  #   @promise = Promise.find(params[:id])
-  # end
+  def promise_params
+    params.require(:promise).permit(:text, :end_datetime, :interval)
+  end
 end

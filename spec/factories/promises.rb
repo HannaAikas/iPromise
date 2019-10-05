@@ -5,6 +5,4 @@ FactoryBot.define do
     end_datetime { '31/01/2018' }
     interval { '2 days' }
   end
-
-
 end

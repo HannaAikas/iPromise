@@ -2,11 +2,6 @@ require 'rails_helper'
 
 RSpec.describe PromisesController, type: :controller do
 
-<<<<<<< HEAD
-  let(:user) { FactoryBot.create(:user) }
-
-  before(:each){ sign_in }
-=======
   describe "GET #index" do
     it "returns http success" do
       sign_in
@@ -33,15 +28,12 @@ RSpec.describe PromisesController, type: :controller do
       post :create, params:{ promise: { text: 'test promise 2',
                                         end_datetime: '31/01/2019',
                                         interval: '1 day'}}
->>>>>>> b906689df1656d312700e2055073f801624d4f01
 
       get :index
       expect(assigns(:promises).length).to eq(1)
       expect(assigns(:promises)[0].text).to eq('test promise 2')
       sign_out
-
     end
-
   end
 
   describe "POST #create" do
@@ -54,5 +46,4 @@ RSpec.describe PromisesController, type: :controller do
       sign_out
     end
   end
-
 end

@@ -6,8 +6,7 @@ class PromisesController < ApplicationController
     @promises = @user.promises
   end
 
-  def new
-  end
+  def new; end
 
   def create
     @promise = Promise.new

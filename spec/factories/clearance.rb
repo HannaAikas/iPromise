@@ -9,9 +9,8 @@ FactoryBot.define do
 
   factory :user do
     email
-    password { "password" }
+    password { 'password' }
     mobile { '07500000000' }
     firstname { 'test_name' }
   end
-
 end

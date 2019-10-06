@@ -14,6 +14,7 @@ class PromisesController < ApplicationController
     @promise.text = promise_params.delete(:text)
     @promise.end_datetime = promise_params.delete(:end_datetime)
     @promise.interval = promise_params.delete(:interval)
+    @promise.punishment = promise_params.delete(:punishment)
     @promise.user_id = current_user.id
     @promise.save!
 
@@ -21,6 +22,6 @@ class PromisesController < ApplicationController
   end
 
   def promise_params
-    params.require(:promise).permit(:text, :end_datetime, :interval)
+    params.require(:promise).permit(:text, :end_datetime, :interval, :punishment)
   end
 end

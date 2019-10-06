@@ -1,17 +1,34 @@
+<script>
+</script>
+
 <h2>Create a new promise</h2>
 
 <%= form_for :promise, url: promises_path do |form| %>
-  <%= form.label :text, 'I promise...' %>
-  <%= form.text_field :text %>
-  <br>
-  <%= form.label :interval, 'How often do you want to receive reminder?' %>
-  <%= form.text_field :interval, :value => '1 day'%>
+  <div class='subheading'>What would you like to promise?<div>
+  <div class="Promise_types">
+
+    <%= radio_button_tag(:category, "promise") %>
+    <%= label_tag(:social_media, "Limit my social media usage") %>  
+    
+    <%= radio_button_tag(:category, "promise") %>
+    <%= label_tag(:streaming_sites, "Spend less time on streaming sites") %>  
+
+    <%= radio_button_tag(:category, "promise") %>
+    <%= label_tag(:internet, "Turn my phone off at a set time every night") %>  
+
+    <%= radio_button_tag(:category, "promise") %>
+    <%= label_tag(:other, "Other") %>
+  </div>
+  <div class='other_promise'>
+    <%= form.label :text, 'I promise...' %>
+    <%= form.text_field :text %>
+  </div>
+  <br>  
+  <%= form.label :punishment, 'If I break my promise...' %>
+  <%= form.text_field :punishment %>
   <br>
   <%= form.label :end_datetime, 'End date:'%>
   <%= form.date_select(:end_datetime, order: [:day, :month, :year], start_year: Date.today.year - 0, end_year: Date.today.year + 5) %>
-  <br>
-  <%= form.label :punishment, 'If I break my promise...' %>
-  <%= form.text_field :punishment %>
   <br>
   <%= form.submit 'Submit' %>
 <% end %>

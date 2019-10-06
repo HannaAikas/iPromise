@@ -21,6 +21,7 @@ AllCops:
     - 'Gemfile'
     - 'Rakefile'
     - 'app/*'
+    - 'node_modules/**/*'
     - !ruby/regexp /old_and_unused\.rb$/
 
 Style/Documentation:

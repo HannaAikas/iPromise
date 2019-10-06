@@ -1,5 +1,4 @@
 class UsersController < Clearance::UsersController
-
   def create
     @user = user_from_params
     if @user.save!
@@ -25,5 +24,4 @@ class UsersController < Clearance::UsersController
       user.mobile = mobile
     end
   end
-
 end

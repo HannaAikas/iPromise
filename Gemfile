@@ -38,7 +38,7 @@ group :development, :test do
   gem 'simplecov'
   gem 'simplecov-console'
   gem 'rubocop'
-  # gem 'rubocop-rails'
+  gem 'rubocop-rails'
   gem 'rails-controller-testing'
   gem 'factory_bot_rails'
   gem 'capybara', '~> 2.13'

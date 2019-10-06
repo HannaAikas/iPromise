@@ -24,4 +24,12 @@ class PromisesController < ApplicationController
   def promise_params
     params.require(:promise).permit(:text, :end_datetime, :interval, :punishment)
   end
+
+  def congrats
+    @promise = Promise.find(params[:id])
+  end
+
+  def punishment
+    @promise = Promise.find(params[:id])
+  end
 end

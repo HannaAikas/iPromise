@@ -1,27 +1,42 @@
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
+$(document).ready(function(){
+  $("#hidden_fields").hide();
+  $('#promise_category').on('change', function() {
+    if ( this.value == '4') {
+      $("#hidden_fields").show();
+    }
+  });
+});
 </script>
+</head>
 
 <h2>Create a new promise</h2>
 
 <%= form_for :promise, url: promises_path do |form| %>
+
   <div class='subheading'>What would you like to promise?<div>
-  <div class="Promise_types">
 
-    <%= radio_button_tag(:category, "promise") %>
-    <%= label_tag(:social_media, "Limit my social media usage") %>  
-    
-    <%= radio_button_tag(:category, "promise") %>
-    <%= label_tag(:streaming_sites, "Spend less time on streaming sites") %>  
+    <%= select(:promise, :category, [
+      ['Limit social media usage', 1], 
+      ['Limit time on streaming sites', 2], 
+      ['Turn off phone', 3],
+      ['Other', 4]
+      ]) %>
 
-    <%= radio_button_tag(:category, "promise") %>
-    <%= label_tag(:internet, "Turn my phone off at a set time every night") %>  
-
-    <%= radio_button_tag(:category, "promise") %>
-    <%= label_tag(:other, "Other") %>
-  </div>
-  <div class='other_promise'>
+  <div class='other_promise' id="hidden_fields" >
     <%= form.label :text, 'I promise...' %>
     <%= form.text_field :text %>
+  </div>
+
+  <div> How would you like to measure your promise? </div>
+  
+  <div>
+  <%= select(:promise, :category, [
+    ['Number of hours', 1], 
+    ['Set time per night', 2], 
+    ]) %>
   </div>
   <br>  
   <%= form.label :punishment, 'If I break my promise...' %>

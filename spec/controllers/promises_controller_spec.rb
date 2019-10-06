@@ -43,8 +43,10 @@ RSpec.describe PromisesController, type: :controller do
       sign_in
       post :create, params:{ promise: { text: 'test promise',
                                         end_datetime: '31/01/2019',
-                                        interval: '1 day'}}
+                                        interval: '1 day',
+                                        punishment: 'test punishment',}}
       expect(Promise.find_by(text: 'test promise')).to be_truthy
+      expect(Promise.find_by(punishment: 'test punishment')).to be_truthy
       sign_out
     end
   end

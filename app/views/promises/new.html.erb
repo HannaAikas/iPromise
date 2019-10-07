@@ -1,16 +1,27 @@
 <head>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
-$(document).ready(function(){
-  $("#hidden_fields").hide();
-  $('#promise_category').on('change', function() {
-    if ( this.value == '4') {
-      $("#hidden_fields").show();
-    } else {
-      $("#hidden_fields").hide();
-    }
-  });
+  $(document).ready(function(){
+
+    $(".other_promise").hide();
+    $('#promise_category').on('change', function() {
+      if ( this.value == '4') {
+        $(".other_promise").show();
+      } else {
+        $(".other_promise").hide();
+      }
+    });
+
+    $(".other_punishment").hide();
+    $('#punishment_category').on('change', function() {
+      if ( this.value == '2') {
+        $("#other_punishment").show();
+      } else {
+        $("#other_punishment").hide();
+      }
+    });
 });
+
 </script>
 </head>
 
@@ -21,28 +32,28 @@ $(document).ready(function(){
   <div class='subheading'>What would you like to promise?<div>
 
     <%= select(:promise, :category, [
-      ['Limit social media usage', 1], 
-      ['Limit time on streaming sites', 2], 
-      ['Turn off phone', 3],
+      ['Limit social media to 1 hour a day', 1], 
+      ['Limit streaming sites to 2 hours a day', 2], 
+      ['Turn off phone by 8pm every night', 3],
       ['Other', 4]
       ]) %>
 
-  <div class='other_promise' id="hidden_fields" >
+  <div class='other_promise' id="other_promise" >
     <%= form.label :text, 'I promise...' %>
     <%= form.text_field :text %>
   </div>
 
-  <div> How would you like to measure your promise? </div>
-  
-  <div>
-  <%= select(:promise, :category, [
-    ['Number of hours', 1], 
-    ['Set time per night', 2], 
-    ]) %>
-  </div>
-  <br>  
-  <%= form.label :punishment, 'If I break my promise...' %>
+  <div class='subheading'>Your punishment<div>
+
+    <%= select(:punishment, :category, [
+      ['Donate £50 to charity', 1], 
+      ['Other', 2]
+      ]) %>
+
+  <div class='other_punishment' id="other_punishment" >
+    <%= form.label :punishment, 'If I break my promise...' %>
   <%= form.text_field :punishment %>
+  </div>
   <br>
   <%= form.label :end_datetime, 'End date:'%>
   <%= form.date_select(:end_datetime, order: [:day, :month, :year], start_year: Date.today.year - 0, end_year: Date.today.year + 5) %>

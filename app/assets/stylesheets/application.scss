@@ -6,7 +6,7 @@
   padding: 150px;
 }
 body {
-  background-image: url('4.jpeg');
+  background-image: url('5.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   line-height: 1.1;
@@ -20,7 +20,19 @@ body {
   margin: 100px auto;
   padding: 20xp;
   background:black;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgb(231, 198, 11);
   border-radius: 40px;
   text-align: center; border-radius: 40px;
 }
+.outer {
+  width: 500px;
+  margin: 70px auto;
+  margin-bottom: 15px;
+  font-size: 30px;
+  padding: 100xp;
+  background:black;
+  background-color: pink;
+  border-radius: 40px;
+  text-align: center; border-radius: 40px;
+}
+

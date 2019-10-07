@@ -3,16 +3,14 @@ FactoryBot.define do
     "user#{n}@example.com"
   end
 
-  factory :user do
-    email
-    password { "password" }
-    mobile { '07500000000' }
+  sequence :mobile do |n|
+    n
   end
 
-  # factory :promise do
-  #   user
-  #   text { 'default promise'}
-  #   end_datetime { '31/01/2018' }
-  #   interval { '2 days' }
-  # end
+  factory :user do
+    email
+    password { 'password' }
+    mobile { '07500000000' }
+    firstname { 'test_name' }
+  end
 end

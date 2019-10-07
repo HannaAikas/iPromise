@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
   get "/sign_up" => "clearance/users#new", as: "sign_up"
   get 'home/index'
+  get "promises/:id/congrats" => "promises#congrats"
+  get "promises/:id/punishment" => "promises#punishment"
 
   root 'promises#index'
 

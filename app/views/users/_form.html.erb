@@ -1,19 +1,20 @@
-<div class="text-field">
+<div class="text-field form-group">
   <%= form.label :firstname %>
-  <%= form.text_field :firstname %>
+  <%= form.text_field :firstname, :class => "form-control" %>
 </div>
-
 <div class="text-field">
+
+<div class="text-field form-group">
   <%= form.label :email %>
-  <%= form.text_field :email, type: 'email' %>
+  <%= form.text_field :email, type: 'email', :class => "form-control" %>
 </div>
 
-<div class="password-field">
+<div class="password-field form-group">
   <%= form.label :password %>
-  <%= form.password_field :password %>
+  <%= form.password_field :password, :class => "form-control" %>
 </div>
 
-<div class="text-field">
+<div class="text-field form-group">
   <%= form.label :mobile %>
-  <%= form.text_field :mobile %>
+  <%= form.text_field :mobile, :class => "form-control" %>
 </div>

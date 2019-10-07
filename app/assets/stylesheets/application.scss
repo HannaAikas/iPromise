@@ -1,0 +1,13 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.sign-up {
+  padding: 150px;
+}
+body {
+  // background-image: url('i-promise.jpg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-color: bisque;
+}

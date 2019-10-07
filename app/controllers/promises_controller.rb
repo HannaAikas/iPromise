@@ -18,6 +18,7 @@ class PromisesController < ApplicationController
     @promise.punishment = promise_params.delete(:punishment)
     @promise.user_id = current_user.id
     @promise.last_reminder_time = DateTime.now
+    @promise.status = true
     @promise.save!
 
     redirect_to promises_path

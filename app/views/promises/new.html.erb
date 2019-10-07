@@ -1,19 +1,18 @@
 <head>
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
   $(document).ready(function(){
 
-    $(".other_promise").hide();
-    $('#promise_category').on('change', function() {
+    $("#other_promise").hide();
+    $('#promise_text').on('change', function() {
       if ( this.value == '4') {
-        $(".other_promise").show();
+        $("#other_promise").show();
       } else {
-        $(".other_promise").hide();
+        $("#other_promise").hide();
       }
     });
 
-    $(".other_punishment").hide();
-    $('#punishment_category').on('change', function() {
+    $("#other_punishment").hide();
+    $('#promise_punishment').on('change', function() {
       if ( this.value == '2') {
         $("#other_punishment").show();
       } else {
@@ -30,29 +29,30 @@
 <h2>Create a new promise</h2>
 
 <%= form_for :promise, url: promises_path do |form| %>
+ 
+  <div class='subheading'>What would you like to promise?</div>
 
-  <div class='subheading'>What would you like to promise?<div>
-
-    <%= select(:promise, :category, [
+    <%= form.select(:text, options_for_select([
       [' ', 0], 
       ['Limit social media to 30 minutes a day', 1], 
       ['Limit streaming sites to 2 hours a day', 2], 
       ['Turn off phone by 8pm every night', 3],
       ['Other', 4]
-      ]) %>
+      ])) %>
 
-  <div class='other_promise' id="other_promise" >
-    <%= form.label :text, 'I promise...' %>
-    <%= form.text_field :text %>
-  </div>
+    <div class='other_promise' id="other_promise" >
+      <%= form.label :text, 'I promise...' %>
+      <%= form.text_field :text %>
+    </div>
 
-  <div class='subheading'>Select a punishment<div>
 
-    <%= select(:punishment, :category, [
+  <div class='subheading'>Select a punishment</div>
+
+    <%= form.select(:punishment, options_for_select([
       [' ', 0], 
       ['Donate £50 to charity', 1], 
       ['Other', 2]
-      ]) %>
+      ])) %>
 
   <div class='other_punishment' id="other_punishment" >
     <%= form.label :punishment, 'If I break my promise...' %>

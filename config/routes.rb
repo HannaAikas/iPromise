@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'home/index'
   get "promises/:id/congrats" => "promises#congrats"
   get "promises/:id/punishment" => "promises#punishment"
+  post "promises/:id/edit" => "promises#update"
 
   root 'promises#index'
 

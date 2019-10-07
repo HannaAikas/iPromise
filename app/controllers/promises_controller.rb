@@ -31,4 +31,16 @@ class PromisesController < ApplicationController
   def punishment
     @promise = Promise.find(params[:id])
   end
+
+  def edit
+    @promise = Promise.find(params[:id])
+  end
+
+  def update
+    @promise = Promise.find(params[:id])
+    permitted_columns = params.require(:promise).permit(:text, :interval, :end_datetime, :punishment)
+    @promise.update_attributes(permitted_columns)
+
+    redirect_to promises_path
+  end
 end

@@ -53,7 +53,6 @@ RSpec.describe PromisesController, type: :controller do
                                          punishment: 'test punishment' } }
       expect(Promise.find_by(text: 'test promise')).to be_truthy
       expect(Promise.find_by(punishment: 'test punishment')).to be_truthy
-      expect(Promise.find_by(last_reminder_time).to eq(dt))
 
       sign_out
     end

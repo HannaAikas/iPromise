@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+ 
+.css-anim-congratz {
+
+div{margin:25px auto; width:700px;}
+span{width:20px; height:10px;display:block;border-radius:10px;
+float:left;}
+
+span:nth-child(2n-1){background:red; animation:bar1 0.8s infinite ease;}
+
+span:nth-child(2n){background:yellow;animation:bar2 0.8s infinite ease;}
+
+@keyframes bar1{
+0%{background:red}100%{background:yellow}
+}
+
+@keyframes bar2{
+0%{background:yellow}100%{background:red}
+}
+
+h2{clear:both;padding-top:15px; padding-left:15px;font-family:verdana;
+
+font-size:5em;}
+}

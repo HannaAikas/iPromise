@@ -25,11 +25,12 @@
       <% if Clearance.configuration.allow_sign_up? %>
         <button id='signup-button'>
           <%= link_to t(".sign_up"), sign_up_path %>
+        </button>
         <% end %>
         </div>
         <div id='forgot'>
-        <%= link_to t(".forgot_password"), new_password_path %>
+          <%= link_to t(".forgot_password"), new_password_path %>
         </div>
-  <% end %>
-  </div>
+      <% end %>
+    </div>
 </body>

@@ -4,6 +4,7 @@
 <ul>
     <% @promises.each do |promise| %>
     <li><%= promise.text %></li>
+    <%= link_to 'edit', edit_promise_path(promise) %>
     <% end %>
 </ul>
 

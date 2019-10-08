@@ -3,7 +3,11 @@
 
 <ul>
     <% @promises.each do |promise| %>
-    <li><%= promise.text %></li>
+      <% if promise.text == 'Other'%>
+        <li><%= promise.other_text %></li>
+      <% else %>
+        <li><%= promise.text %></li>
+      <% end %>
     <% end %>
 </ul>
 

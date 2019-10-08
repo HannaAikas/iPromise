@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_06_095603) do
+ActiveRecord::Schema.define(version: 2019_10_08_003144) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "promises", force: :cascade do |t|
+    t.text "other_text"
     t.text "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -23,6 +24,7 @@ ActiveRecord::Schema.define(version: 2019_10_06_095603) do
     t.interval "interval"
     t.bigint "user_id"
     t.text "punishment"
+    t.text "other_punishment"
     t.index ["user_id"], name: "index_promises_on_user_id"
   end
 

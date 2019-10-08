@@ -2,36 +2,77 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.sign-up {
-  padding: 150px;
-}
+
 body {
   background-image: url('5.jpg');
+  // background-color: lightseagreen;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   line-height: 1.1;
-  // color:black;
-  // background-color: rgb(139, 131, 131);
-  //commit
 }
 
 .container {
   margin: 100px auto;
-  padding: 100xp;
   background:black;
   background-color: rgba(0,0,0,0.6);
   border-radius: 40px;
   text-align: center; border-radius: 40px;
 }
-.outer {
-  width: 300px;
-  margin: 30px auto;
-  margin-bottom: 15px;
-  font-size: 30px;
-  padding: 100xp;
-  background:black;
-  background-color: pink;
-  border-radius: 300px auto ;
-  text-align: center  ; 
+
+.promise-container {
+  display: flex;
+  flex-flow: row wrap;
+  height: 50%;
+  overflow: scroll;
 }
+
+@keyframes wiggle {
+  10% {
+    transform: translateY(-10px);
+  }
+  20% {
+    transform: translateY(10px);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+
+  40% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+}
+
+.outer {
+  display: flex;
+  flex: 1 20%;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  width: 100px;
+  height: 200px;
+  overflow: hidden;
+  font-size: 2em;
+  padding: 30px;
+  background-color: pink;
+  border-radius: 50%;
+  text-align: center;
+  // transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: purple;
+    // transform: translateY(-10px) rotate(-5deg);
+    animation: wiggle 1.2s infinite;
+  }
+}
+
+
+// h1 {
+//   color: yellow;
+// }
 

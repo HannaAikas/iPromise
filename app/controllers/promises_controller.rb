@@ -39,7 +39,7 @@ class PromisesController < ApplicationController
   def update
     @promise = Promise.find(params[:id])
     permitted_columns = params.require(:promise).permit(:text, :interval, :end_datetime, :punishment)
-    @promise.update_attributes(permitted_columns)
+    @promise.update(permitted_columns)
 
     redirect_to promises_path
   end

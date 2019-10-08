@@ -16,9 +16,7 @@ RSpec.describe PromisesController, type: :controller do
       sign_out
     end
   end
-end
 
-RSpec.describe PromisesController, type: :controller do
   describe 'fetching promises' do
     it 'only fetch promises created by current user' do
       sign_in
@@ -38,9 +36,7 @@ RSpec.describe PromisesController, type: :controller do
       sign_out
     end
   end
-end
 
-RSpec.describe PromisesController, type: :controller do
   describe 'POST #create' do
     it "save a new entry to the 'promise' database" do
       sign_in

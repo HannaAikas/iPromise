@@ -1,6 +1,6 @@
 require 'clockwork'
-require_relative './config/boot'
-require_relative './config/environment'
+require_relative './boot'
+require_relative './environment'
 require_relative '../app/workers/worker.rb'
 require_relative '../app/background_jobs/reminder.rb'
 

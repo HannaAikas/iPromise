@@ -186,6 +186,8 @@ margin-bottom: 50px;
  .congratz-container {
     display: flex;
     flex-direction: column;
+    position: relative;
+    bottom: 65px;
     justify-content: center;
     align-items: center;
 
@@ -193,6 +195,8 @@ margin-bottom: 50px;
  .punishment-container{  display: flex;
   flex-direction: column;
   justify-content: center;
+   position: relative;
+  bottom: 65px;
   align-items: center;
  }
  .link-to-text1{

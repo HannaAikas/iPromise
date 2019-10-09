@@ -38,7 +38,8 @@ class Reminder
     if promise.end_datetime.to_time <= current_time
       puts "Sending final text and close promise..."
       @text_sender.send_text(user_mobile, "Hey there #{user_name}! Have you kept your promise?
-        If YES, click: https://www.google.com or If NO, click: https://www.google.com")
+        If YES, click: cryptic-thicket-87200.herokuapp.com/#{promise.id}/congrats
+        or If NO, click: cryptic-thicket-87200.herokuapp.com/#{promise.id}/punishment")
       puts "final message sent"
       promise.status = 'false'
       promise.save

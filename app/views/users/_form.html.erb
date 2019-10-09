@@ -1,28 +1,27 @@
-<% if signed_in? %>
-<%= button_to 'Sign out', sign_out_path, method: :delete %>
-<% end %>
-<div class="container" id='signup'>
-<h1 class='logo'>iPromise</h1>
 
-<div class="text-field form-group">
-  <%= form.label :firstname %>
-  <%= form.text_field :firstname, :class => "form-control" %>
-</div>
+  <% if signed_in? %>
+  <%= button_to 'Sign out', sign_out_path, method: :delete %>
+  <% end %>
+  <h1 class='logo'>iPromise</h1>
 
-<div class="text-field form-group">
-  <%= form.label :email %>
-  <%= form.text_field :email, type: 'email', :class => "form-control" %>
-</div>
+  <div class="text-field form-group">
+    <%= form.label :firstname %>
+    <%= form.text_field :firstname, :class => "form-control" %>
+  </div>
 
-<div class="password-field form-group">
-  <%= form.label :password %>
-  <%= form.password_field :password, :class => "form-control" %>
-</div>
+  <div class="text-field form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, type: 'email', :class => "form-control" %>
+  </div>
+
+  <div class="password-field form-group">
+    <%= form.label :password %>
+    <%= form.password_field :password, :class => "form-control" %>
+  </div>
 
 
-<div class="text-field form-group">
-  <%= form.label :mobile %>
-  <%= form.text_field :mobile, :class => "form-control" %>
-</div>
+  <div class="text-field form-group">
+    <%= form.label :mobile %>
+    <%= form.text_field :mobile, :class => "form-control" %>
+  </div>
 
-</div>

@@ -1,3 +1,4 @@
+<div class="container" id='signup'>
 <div id="clearance" class="sign-up">
 
   <%= form_for @user do |form| %>
@@ -10,11 +11,15 @@
     
 
   <div class="other-links">
-  <div class='acc'>Already have an account?</div>
+    <div class='acc'>Already have an account?</div>
 
-    <div id='signup-button'>
-      <%= link_to t(".sign_in"), sign_in_path %>
+      <div id='signup-button'>
+        <%= link_to t(".sign_in"), sign_in_path %>
       </div>
     </div>
+  </div>
   <% end %>
+</div>
+
+
 </div>

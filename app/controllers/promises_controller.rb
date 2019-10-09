@@ -6,8 +6,7 @@ class PromisesController < ApplicationController
     @promises = @user.promises
   end
 
-  def new
-  end
+  def new; end
 
   def create
     @promise = Promise.new
@@ -23,5 +22,25 @@ class PromisesController < ApplicationController
 
   def promise_params
     params.require(:promise).permit(:text, :end_datetime, :interval, :punishment)
+  end
+
+  def congrats
+    @promise = Promise.find(params[:id])
+  end
+
+  def punishment
+    @promise = Promise.find(params[:id])
+  end
+
+  def edit
+    @promise = Promise.find(params[:id])
+  end
+
+  def update
+    @promise = Promise.find(params[:id])
+    permitted_columns = params.require(:promise).permit(:text, :interval, :end_datetime, :punishment)
+    @promise.update(permitted_columns)
+
+    redirect_to promises_path
   end
 end

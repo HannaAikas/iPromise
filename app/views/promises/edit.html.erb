@@ -1,9 +1,6 @@
-<div class='container' id='create-promise'>
-<h1 class='logo'>iPromise</h1>
+<h2>Edit your promise</h2>
 
-<h2>Create a new promise</h2>
-
-<%= form_for :promise, url: promises_path do |form| %>
+<%= form_for :promise do |form| %>
   <%= form.label :text, 'I promise...' %>
   <%= form.text_field :text %>
   <br>
@@ -16,8 +13,6 @@
   <%= form.label :punishment, 'If I break my promise...' %>
   <%= form.text_field :punishment %>
   <br>
-  <%= form.submit 'Submit' %>
+  <%= form.submit %>
 <% end %>
 <%= link_to 'Back', promises_path %>
-
-</div>

@@ -1,8 +1,10 @@
 <%= image_tag('200.gif', draggable: "true", id: "drag1", :size => "1000x300",class: "center-block")%>
-
-<h1>Congratulations <%= current_user.firstname %>, you kept your promise:</h1>
-<h2>I promise <%=@promise.text%></h2>
-<h1>You're awesome!</h1>
-<h2>Would you like to make a new promise?</h2>
-
-<%= link_to 'create a new promise', new_promise_path %>
+<div class="congratz-container">
+  <h2 align="center">Congratulations <%= current_user.firstname %>, you kept your promise :</h2>
+  <h2 align="center">I promise <%=@promise.text%></h2>
+  <h2 align="center">You're awesome!</h2>
+  <h2 align="center">Would you like to make a new promise? </h2>
+  <button  class="btn btn-primary">
+    <%= link_to 'create a new promise', new_promise_path,class: 'link-to-text'  %>
+  </button>
+</div>

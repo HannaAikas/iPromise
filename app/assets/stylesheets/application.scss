@@ -22,3 +22,29 @@ img {
  margin: 20px 20px;
 margin-bottom: 50px;
 }
+h1{
+font-family: Circular, Roboto, Helvetica Neue, sans-serif;
+ -webkit-font-smoothing: auto;
+ font-family: open sans,sans-serif;
+ font-weight: 300;
+ color: color;
+ font-size: 6rem
+ }
+ h2 {
+      font-style: italic;
+    font-size: 4rem
+}
+ .link-to-text{
+  color: pink;
+  font-size: 3rem;
+  width: 500px;
+  margin: 100px auto;
+  padding: 20xp;
+ }
+
+ .congratz-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }

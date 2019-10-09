@@ -18,17 +18,29 @@ https://cryptic-thicket-87200.herokuapp.com/sign_in
 
 This project has the following features: 
 
-* Authentication (Sign-up, Log-in, Log-out)
+**From a user perspective:**
 
-* Scheduler (to do the countdown)
+* Authentication (user can sign up, log in, log out)
 
 * A user can create and edit a new promise
 
-* A user can nominate friend to keep them accountable for the promise made
+* A user can set an appropriate “punishment” for each promise i.e. something they will do if they break this promise
 
-* A user recieves helpful text message to check on their promise and its progress as well as an encouraging reminder
+* A user receives daily text messages to remind them of their promise(s)
 
-* The web app has 'Congratulations you kept your promise' and 'Oh no! You broke your promise' pages
+* A user receives a final text message on the end date of the promise, asking them to confirm whether they kept the promise. This will take them to a ‘congratulations’ page or a ‘Oh no, you broke your promise’ page.
+
+**In the background:**
+
+* In the background, the app has a database that stores details of users and their promises
+
+* There is also a separate “scheduler” program that talks to this database, checks when it is time to send out a text message, and sends an appropriate text message
+
+* Users will receive a daily text message reminding them of their promise
+
+* On the end date of the promise, they will receive a text message asking them to click a link to confirm whether or not they kept their promise. This will open the app on their mobile phone browser, ask them to log in, and then show them either the “congratulations” page, or the page that reminds them of their “punishment” for breaking the promise.
+
+* The scheduler is contained in a separate repo: https://github.com/HannaAikas/scheduler 
 
 ## Quick start
 

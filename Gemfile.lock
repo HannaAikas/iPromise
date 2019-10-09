@@ -227,11 +227,11 @@ GEM
     selenium-webdriver (3.142.5)
       childprocess (>= 0.5, < 3.0)
       rubyzip (>= 1.2.2)
-    sidekiq (6.0.1)
-      connection_pool (>= 2.2.2)
-      rack (>= 2.0.0)
-      rack-protection (>= 2.0.0)
-      redis (>= 4.1.0)
+    sidekiq (5.2.7)
+      connection_pool (~> 2.2, >= 2.2.2)
+      rack (>= 1.5.0)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.5, < 5)
     simplecov (0.17.1)
       docile (~> 1.1)
       json (>= 1.8, < 3)
@@ -295,13 +295,12 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 6.0.0)
   rails-controller-testing
-  redis (~> 4.0)
   rspec-rails (~> 4.0.0.beta2)
   rubocop
   rubocop-rails
   sass-rails (~> 5)
   selenium-webdriver
-  sidekiq
+  sidekiq (= 5.2.7)
   simplecov
   simplecov-console
   spring

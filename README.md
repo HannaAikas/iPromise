@@ -1,21 +1,20 @@
 # iPromise -- created by:
 
-Hanna Aikas - https://github.com/HannaAikas   
-Lauren Harris - https://github.com/LaurenLau   
-Chuan Cheng - https://github.com/nervecell23   
-Imane Ben-touhami - https://github.com/monmon8   
+Chuan Cheng - https://github.com/nervecell23
 Evelina Clayton - https://github.com/EvelinaClayton
-
-
+Hanna Aikas - https://github.com/HannaAikas  
+Imane Ben-touhami - https://github.com/monmon8 
+Lauren Harris - https://github.com/LaurenLau   
+   
 To see the app in action, please visit:
 
 https://cryptic-thicket-87200.herokuapp.com/sign_in
 
 ## What is iPromise?
 
-| Github link  | Description | Development Timeframe | Technologies used | Testing |
+| Github link  | Description | Development Timeframe | Technologies used | Testing & Deployment |
 |:-----------:|:-------------:| :------------:| :------------:| :------------:|
-| [iPromise](https://github.com/nervecell23/iPromise) | Web App: Allows users to make promises for personal improvement and nominated friends keep them accountable. | 2 weeks | Ruby, Ruby on Rails, HTML, CSS, Postgres, Heroku | RSpec, Factory_bot, Travis CI |
+| [iPromise](https://github.com/nervecell23/iPromise) | Web App: Allows users to make promises for personal improvement and set an appropriate “punishment” if they fail to keep these. | 2 weeks | Ruby on Rails, HTML, CSS, PostgreSQL | RSpec, Factory_bot, Capybara, Travis CI, Heroku |
 
 This project has the following features: 
 
@@ -53,29 +52,3 @@ To test iPromise using Rspec:
 ```
 
 Ruby version: 2.6.3p62
-
-----------------------
-# CHECK LIST
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

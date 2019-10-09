@@ -6,14 +6,14 @@ RSpec.feature 'Visitor signs in validly' do
     create_user 'user@example.com', 'password'
     sign_in_with 'user@example.com', 'password'
 
-    expect(page).to have_content("Sign out")
+    expect(page).to have_content('Sign out')
   end
 
   scenario 'with valid mixed-case email and password ' do
     create_user 'user.name@example.com', 'password'
     sign_in_with 'User.Name@example.com', 'password'
 
-    expect(page).to have_content("Sign out")
+    expect(page).to have_content('Sign out')
   end
 
   scenario 'tries with invalid password' do

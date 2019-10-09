@@ -12,7 +12,7 @@ RSpec.feature 'Visitor signs up' do
 
   scenario 'with valid email and password' do
     sign_in
-    expect(page).to have_content("Sign out")
+    expect(page).to have_content('Sign out')
   end
 
   # scenario "tries with invalid email" do

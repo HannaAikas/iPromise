@@ -10,20 +10,16 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Pacifico&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
-
-  <% if signed_in? %>
-  Logged in as: <%= current_user.email %>
-  <%= button_to 'Sign out', sign_out_path, method: :delete %>
-<% end %>
-
-<div id="flash">
-  <% flash.each do |key, value| %>
-    <div class="flash <%= key %>"><%= value %></div>
-  <% end %>
-</div>
+    <div id="flash">
+      <% flash.each do |key, value| %>
+      <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

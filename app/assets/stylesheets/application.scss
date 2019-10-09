@@ -1,3 +1,4 @@
+
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -7,15 +8,14 @@
 }
 
 body {
-  background-image: url('background.jpg');
-  background-size: 100% 100%;
+  background-image: url('background_final.jpg');
   font-family: open sans,sans-serif;
   font-weight: 300;
   font-size: 1.7rem;
-//   -webkit-background-size: cover;
-//  -moz-background-size: cover;
-//  -o-background-size: cover;
-//  background-size: cover;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .logo {
@@ -52,6 +52,8 @@ input, .form-control  {
 #promise_punishment, #promise_text {
   width: 380px;
 }
+
+
 
 .container {
   background-color: rgba(255, 255, 255, 0.774);
@@ -164,3 +166,44 @@ input[type=submit]:hover:before,input[type=submit]:hover:after,button:hover:befo
   width:100%;
   transition:800ms ease all;
 }
+img {
+ border-radius: 8px;
+ margin: 20px 20px;
+margin-bottom: 50px;
+}
+
+
+ .link-to-text{
+  font-size: 2.1rem;
+  // width: 390px;
+  // margin: 100px auto;
+  // padding: 10xp;
+  align-items: center;
+
+ }
+
+ .congratz-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 65px;
+    justify-content: center;
+    align-items: center;
+
+ }
+ .punishment-container{  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   position: relative;
+  bottom: 65px;
+  align-items: center;
+ }
+ .link-to-text1{
+
+  font-size: 2.1rem;
+  // width: 400px;
+  // margin: 100px auto;
+  // padding: 10xp;
+  align-items: center;
+
+ }

@@ -16,17 +16,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
  
-body {
-  background-image: url('background.jpg');
-  background-size: 100% 100%;
-//   font-family: open sans,sans-serif;
-  font-weight: 300;
-  font-size: 1.7rem;
-//   -webkit-background-size: cover;
-//  -moz-background-size: cover;
-//  -o-background-size: cover;
-//  background-size: cover;
-}
+body {
+   background-image: url('background.jpg');
+   background-size: 100% 100%;
+   font-family: open sans,sans-serif;
+   font-weight: 300;
+   font-size: 1.7rem;
+ //   -webkit-background-size: cover;
+ //  -moz-background-size: cover;
+ //  -o-background-size: cover;
+ //  background-size: cover;
+ }
 
 img {
  border-radius: 8px;

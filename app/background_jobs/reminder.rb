@@ -12,6 +12,7 @@ class Reminder
     Promise.all.each do |promise|
       process(promise)
     end
+    puts "Iterate done!!"
   end
 
   def process(promise)
@@ -39,7 +40,8 @@ class Reminder
       @text_sender.send_text(user_mobile, "Hey there #{user_name}! Have you kept your promise?
         If YES, click: https://www.google.com or If NO, click: https://www.google.com")
       puts "final message sent"
-      promise.close
+      promise.status = 'false'
+      promise.save
       puts "promise closed"
       return
     end
@@ -48,7 +50,8 @@ class Reminder
     if current_time - promise.last_reminder_time.to_time > one_day_timedifference
       puts "Sending reminder..."
       @text_sender.send_text(user_mobile, "Here is your promise: #{promise.text}")
-      promise.update_last_reminder_time(current_time)
+      promise.last_reminder_time = current_time
+      promise.save
       puts "reminder sent"
     end
 

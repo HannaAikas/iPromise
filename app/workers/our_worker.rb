@@ -5,7 +5,7 @@ class OurWorker
   include Sidekiq::Worker
 
   def perform
-    new_send_msg = SendMessage.new
-    new_send_msg.send_msg
+    new_send_msg = Reminder.new
+    new_send_msg.iterate_database
   end
 end

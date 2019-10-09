@@ -13,9 +13,11 @@ class PromisesController < ApplicationController
   def create
     @promise = Promise.new
     @promise.text = promise_params.delete(:text)
+    @promise.other_text = promise_params.delete(:other_text)
     @promise.end_datetime = promise_params.delete(:end_datetime)
     @promise.interval = promise_params.delete(:interval)
     @promise.punishment = promise_params.delete(:punishment)
+    @promise.other_punishment = promise_params.delete(:other_punishment)
     @promise.user_id = current_user.id
     @promise.last_reminder_time = DateTime.now
     @promise.status = true
@@ -25,7 +27,7 @@ class PromisesController < ApplicationController
   end
 
   def promise_params
-    params.require(:promise).permit(:text, :end_datetime, :interval, :punishment)
+    params.require(:promise).permit(:other_text, :other_punishment, :text, :end_datetime, :interval, :punishment)
   end
 
   def congrats

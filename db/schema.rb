@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_07_130726) do
+ActiveRecord::Schema.define(version: 2019_10_08_003144) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2019_10_07_130726) do
     t.datetime "last_reminder_time"
     t.text "punishment"
     t.boolean "status"
+    t.text "other_text"
+    t.text "other_punishment"
     t.index ["user_id"], name: "index_promises_on_user_id"
   end
 

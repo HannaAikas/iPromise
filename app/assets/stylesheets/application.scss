@@ -1,0 +1,167 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('background.jpg');
+  background-size: 100% 100%;
+  font-family: open sans,sans-serif;
+  font-weight: 300;
+  font-size: 1.7rem;
+//   -webkit-background-size: cover;
+//  -moz-background-size: cover;
+//  -o-background-size: cover;
+//  background-size: cover;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+  padding-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#logo-show {
+  margin-top: -100px;
+  margin-bottom: 20px;
+}
+.text-field, .password-field {
+  text-align: left;
+
+}
+ label {
+  display:block;
+  text-align: left;
+}
+
+#signup-button, .acc {
+  display: inline;
+  margin-top: 30px;
+}
+
+input, .form-control  {
+  width: 380px;
+  height: 45px;
+  flex-grow: 1;
+}
+#promise_punishment, #promise_text {
+  width: 380px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.774);
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100px;
+  flex-grow: 1;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -ms-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -o-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+#signin {
+  margin-top: 100px; 
+  height: 450px;
+  width: 450px;
+}
+
+#signup {
+  margin-top: 100px; 
+  height: 640px;
+  width: 450px;
+}
+
+#show {
+  margin-top: 5px; 
+  height: 500px;
+  width: 450px;
+}
+.subheading {
+  text-align: left;
+
+}
+
+#create-promise {
+  margin-top: 100px; 
+  height: 640px;
+  width: 450px;
+}
+
+#logo-create {
+  margin-bottom: 10px;
+}
+.sign-out-link {
+  text-align: center;
+  margin-top: 70px;
+  margin-left: 350px;
+}
+
+.name {
+  font-weight: 500;
+}
+
+
+.password-field form-group {
+  height: 10px;
+}
+.signup-button {
+  align-items: center;
+  text-align: center;
+}
+.password-field {
+  margin-top: 10px;
+  flex-grow: 1;
+}
+
+input[type=submit], button {
+  background:rgb(179, 184, 183);
+  color:#fff;
+  border:none;
+  position:relative;
+  height:55px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  border-radius: 3px;
+  flex-grow: 1;
+}
+input[type=submit]:hover, button:hover {
+  background:#fff;
+  color:rgb(144, 148, 147);
+}
+input[type=submit]:before, input[type=submit]:after, button:before, button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: rgb(179, 184, 183);
+  transition:400ms ease all;
+}
+input[type=submit]:after, button:after {
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+input[type=submit]:hover:before,input[type=submit]:hover:after,button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+

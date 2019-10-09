@@ -52,6 +52,8 @@ To test iPromise using Rspec:
 > rspec
 ```
 
+Ruby version: 2.6.3p62
+
 ----------------------
 # CHECK LIST
 

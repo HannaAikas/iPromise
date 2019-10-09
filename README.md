@@ -66,7 +66,7 @@ To test iPromise using Rspec:
 Ruby version: 2.6.3p62
 
 ------------------------
-#Next Steps: 
+## Next Steps: 
 
 This app was developed under strict time constraints, and we suggest the following features to be added for future versions:
 

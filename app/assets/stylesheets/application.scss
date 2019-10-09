@@ -15,10 +15,17 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
  
 body {
    background-image: url('background.jpg');
-   background-size: 100% 100%;
+   background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: right 0.3em bottom 0.1em;
+    background-position: 0.5cm 0.1cm;
+   
    font-family: open sans,sans-serif;
    font-weight: 300;
    font-size: 1.7rem;
@@ -33,24 +40,18 @@ img {
  margin: 20px 20px;
 margin-bottom: 50px;
 }
-h1{
-font-family: Circular, Roboto, Helvetica Neue, sans-serif;
- -webkit-font-smoothing: auto;
- font-family: open sans,sans-serif;
- font-weight: 300;
- color: color;
- font-size: 6rem
- }
+
  h2 {
-      font-style: italic;
-    font-size: 4rem
+    font-style: italic;
+    font-size: 3.7rem
 }
  .link-to-text{
-  color: pink;
-  font-size: 3rem;
-  width: 500px;
-  margin: 100px auto;
-  padding: 20xp;
+  font-size: 2.1rem;
+  // width: 390px;
+  // margin: 100px auto;
+  // padding: 10xp;
+  align-items: center;
+  
  }
 
  .congratz-container {
@@ -58,4 +59,20 @@ font-family: Circular, Roboto, Helvetica Neue, sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+ }
+ .punishment-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+ .link-to-text1{
+
+  font-size: 2.1rem;
+  // width: 400px;
+  // margin: 100px auto;
+  // padding: 10xp;
+  align-items: center;
+  
  }

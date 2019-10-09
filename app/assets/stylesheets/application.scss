@@ -24,15 +24,18 @@ body {
   padding-top: 20px;
   margin-top: 20px;
   margin-bottom: 40px;
-  
 }
 
+#logo-show {
+  margin-bottom: 20px;
+}
 .text-field, .password-field {
   text-align: left;
 
 }
-input, label {
+ label {
   display:block;
+  text-align: left;
 }
 
 #signup-button, .acc {
@@ -75,16 +78,27 @@ input, .form-control  {
 }
 
 #show {
+  margin-top: 5px; 
+  height: 500px;
+  width: 450px;
+}
+
+#create-promise {
   margin-top: 100px; 
   height: 500px;
   width: 450px;
 }
 
-#create {
-  margin-top: 100px; 
-  height: 500px;
-  width: 450px;
+.sign-out-link {
+  text-align: center;
+  margin-top: 70px;
+  margin-left: 350px;
 }
+
+.name {
+  font-weight: 500;
+}
+
 
 .password-field form-group {
   height: 10px;

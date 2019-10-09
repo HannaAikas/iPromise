@@ -1,3 +1,5 @@
+require 'date'
+
 class PromisesController < ApplicationController
   before_action :require_login
 
@@ -15,6 +17,8 @@ class PromisesController < ApplicationController
     @promise.interval = promise_params.delete(:interval)
     @promise.punishment = promise_params.delete(:punishment)
     @promise.user_id = current_user.id
+    @promise.last_reminder_time = DateTime.now
+    @promise.status = true
     @promise.save!
 
     redirect_to promises_path

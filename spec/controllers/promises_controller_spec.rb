@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'date'
 
 RSpec.describe PromisesController, type: :controller do
   describe 'GET #index' do
@@ -40,12 +41,15 @@ RSpec.describe PromisesController, type: :controller do
   describe 'POST #create' do
     it "save a new entry to the 'promise' database" do
       sign_in
+      dt = DateTime.new(2010,1,1)
+      allow(DateTime).to receive(:now).and_return(dt)
       post :create, params: { promise: { text: 'test promise',
                                          end_datetime: '31/01/2019',
                                          interval: '1 day',
                                          punishment: 'test punishment' } }
       expect(Promise.find_by(text: 'test promise')).to be_truthy
       expect(Promise.find_by(punishment: 'test punishment')).to be_truthy
+
       sign_out
     end
   end

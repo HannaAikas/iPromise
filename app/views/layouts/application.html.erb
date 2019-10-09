@@ -9,10 +9,12 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-
+ 
   </head>
 
   <body>
+  <%= audio_tag "Congratulations-Intro.mp3", id: "sound", class: "audio-to-play", autoplay: true %>
+
     <div id="flash">
       <% flash.each do |key, value| %>
       <div class="flash <%= key %>"><%= value %></div>

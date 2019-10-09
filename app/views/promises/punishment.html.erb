@@ -1,7 +1,9 @@
-
-<h1>Oh no <%= current_user.firstname %>! You broke your promise:</h1>
-<h2>I promise <%=@promise.text%></h2>
-<h1>Time for your punishment... Here's what you're going to do: </h1>
-<h2>If I break my promise <%=@promise.punishment%></h2>
-
-<%= link_to 'create a new promise', new_promise_path %>
+<%= image_tag('giphy.gif', draggable: "true", id: "drag1", :size => "1000x300",class: "center-block")%>
+<div class="punishment-container">
+<h2>Oh no, <%= current_user.firstname %>! You broke your promise!</h2>
+<h2>Remember your punishment:</h2>
+<h3>If I break my promise <%=@promise.punishment%></h3>
+ <div class="link-to-text1">
+<%= link_to 'create a new promise', new_promise_path ,class: 'link-to-text1'%>
+  </div>
+</div>

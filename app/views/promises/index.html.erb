@@ -1,11 +1,23 @@
-<h1>Hi <%= current_user.firstname %>!</h1>
-<h2>Here are your promises:</h1>
+<div class='sign-out-link'>
+  <%= link_to 'Sign out', sign_out_path, method: :delete %>
+</div>
 
-<ul>
+
+<div class='container' id='show'>
+<% if signed_in? %>
+
+<% end %>
+<h1 class='logo' id='logo-show'>iPromise</h1>
+
+<h1 class="name">Hi <%= current_user.firstname %>!</h1>
+<h2 class="promises">Here are your promises:</h1>
     <% @promises.each do |promise| %>
-    <li><%= promise.text %></li>
-    <%= link_to 'edit', edit_promise_path(promise) %>
+    <div class="outer">
+        <p><%= promise.text %></p>
+    </div>
     <% end %>
-</ul>
 
+<div id='create'>
 <%= link_to 'create a new promise', new_promise_path %>
+</div>
+</div>

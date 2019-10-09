@@ -18,7 +18,7 @@ class Reminder
   def process(promise)
 
     puts "DEBUG STATUS: #{promise.status}"
-    return if promise.status == "f"
+    return if promise.status == false
 
     current_time = Time.now.utc
     one_day_timedifference = 60*2
@@ -38,8 +38,8 @@ class Reminder
     if promise.end_datetime.to_time <= current_time
       puts "Sending final text and close promise..."
       @text_sender.send_text(user_mobile, "Hey there #{user_name}! Have you kept your promise?
-        If YES, click: cryptic-thicket-87200.herokuapp.com/#{promise.id}/congrats
-        or If NO, click: cryptic-thicket-87200.herokuapp.com/#{promise.id}/punishment")
+        If YES, click: cryptic-thicket-87200.herokuapp.com/promises/#{promise.id}/congrats
+        or If NO, click: cryptic-thicket-87200.herokuapp.com/promises/#{promise.id}/punishment")
       puts "final message sent"
       promise.status = 'false'
       promise.save

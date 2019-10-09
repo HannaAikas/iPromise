@@ -1,5 +1,4 @@
 <div id="clearance" class="sign-up">
-  <h2><%= t(".title") %></h2>
 
   <%= form_for @user do |form| %>
     <%= render partial: '/users/form', object: form %>
@@ -10,10 +9,12 @@
     </div>
     
 
-    <div class="other-links">
-      <button id='sign-in'
+  <div class="other-links">
+  <div class='acc'>Already have an account?</div>
+
+    <div id='signup-button'>
       <%= link_to t(".sign_in"), sign_in_path %>
-      </button>
+      </div>
     </div>
   <% end %>
 </div>

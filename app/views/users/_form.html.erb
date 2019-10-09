@@ -1,11 +1,13 @@
-
-<div class="container">
+<% if signed_in? %>
+<%= button_to 'Sign out', sign_out_path, method: :delete %>
+<% end %>
+<div class="container" id='signup'>
+<h1 class='logo'>iPromise</h1>
 
 <div class="text-field form-group">
   <%= form.label :firstname %>
   <%= form.text_field :firstname, :class => "form-control" %>
 </div>
-<div class="text-field">
 
 <div class="text-field form-group">
   <%= form.label :email %>
@@ -16,6 +18,7 @@
   <%= form.label :password %>
   <%= form.password_field :password, :class => "form-control" %>
 </div>
+
 
 <div class="text-field form-group">
   <%= form.label :mobile %>

@@ -1,36 +1,29 @@
-<head> 
-  <script> 
+<div class='container' id='signin'>
+  <h1 class='logo'>iPromise</h1>
 
-  </script>
-</head>
-<body>
-<h1>iPromise</h1>
-  <div id='container'>
   <%= form_for :session, url: session_path do |form| %>
     <div class="text-field">
       <%= form.label :email %>
       <%= form.text_field :email, type: 'email' %>
     </div>
 
-    <div class="password-field">
+    <div class="password-field" >
       <%= form.label :password %>
-      <%= form.password_field :password %>
+      <%= form.password_field :password%>
     </div>
 
-    <div class="submit-field">
       <%= form.submit %>
-    </div>
 
     <div class="other-links">
       <% if Clearance.configuration.allow_sign_up? %>
-        <button id='signup-button'>
-          <%= link_to t(".sign_up"), sign_up_path %>
-        </button>
-        <% end %>
+      <div class='acc'>Haven't got an account?</div>
+      <div id='signup-button'>
+        <%= link_to t(".sign_up"), sign_up_path %>
         </div>
-        <div id='forgot'>
+      <% end %>
+        <div id='forgot' style="visibility: hidden">
           <%= link_to t(".forgot_password"), new_password_path %>
         </div>
       <% end %>
     </div>
-</body>
+</div>

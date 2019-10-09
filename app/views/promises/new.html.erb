@@ -7,7 +7,7 @@
         if ( this.value == 'Other') {
           $("#other_promise").show();
         } else {
-          $("#other_promise").hide();               
+          $("#other_promise").hide();
         }
       });
 
@@ -24,22 +24,25 @@
   </script>
 </head>
 
+<div class='container' id='create-promise'>
+<h1 class='logo'>iPromise</h1>
+
 <h2>Create a new promise</h2>
 
 <%= form_for :promise, url: promises_path do |form| %>
 
   <div class='subheading'>What would you like to promise?</div>
-  
+
   <div>
     <%= form.select(:text, options_for_select([
-      ['', 0], 
-      ['Limit social media to 30 minutes a day', 'Limit social media to 30 minutes a day'], 
-      ['Limit streaming sites to 2 hours a day', 'Limit streaming sites to 2 hours a day'], 
+      ['', 0],
+      ['Limit social media to 30 minutes a day', 'Limit social media to 30 minutes a day'],
+      ['Limit streaming sites to 2 hours a day', 'Limit streaming sites to 2 hours a day'],
       ['Turn off phone by 8pm every night', 'Turn off phone by 8pm every night'],
       ['Other', 'Other']
       ])) %>
   </div>
-  
+
     <div class='other_promise' id="other_promise" >
       <%= form.label :other_text, 'I promise...' %>
       <%= form.text_field :other_text %>
@@ -48,8 +51,8 @@
   <div class='subheading'>Select a punishment</div>
 
     <%= form.select(:punishment, options_for_select([
-      [' ', 0], 
-      ['Donate £50 to charity', 'Donate £50 to charity'], 
+      [' ', 0],
+      ['Donate £50 to charity', 'Donate £50 to charity'],
       ['Other', '']
       ])) %>
 
@@ -59,8 +62,10 @@
   </div>
   <br>
   <%= form.label :end_datetime, 'End date:'%>
-  <%= form.date_select(:end_datetime, order: [:day, :month, :year], start_year: Date.today.year - 0, end_year: Date.today.year + 5) %>
+  <%= form.date_field :end_datetime %>
   <br>
   <%= form.submit 'Submit' %>
 <% end %>
 <%= link_to 'Back', promises_path %>
+
+</div>

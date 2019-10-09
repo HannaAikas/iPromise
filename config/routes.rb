@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-
-  # get 'promises/index'
   resources :promises
+
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, controller: "clearance/sessions", only: [:create]
 
@@ -14,7 +13,7 @@ Rails.application.routes.draw do
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"
   delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
   get "/sign_up" => "clearance/users#new", as: "sign_up"
-  get 'home/index'
+
   get "promises/:id/congrats" => "promises#congrats"
   get "promises/:id/punishment" => "promises#punishment"
   post "promises/:id/edit" => "promises#update"

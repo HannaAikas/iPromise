@@ -1,3 +1,4 @@
+
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -52,7 +53,9 @@ input, .form-control  {
 #promise_punishment, #promise_text {
   width: 380px;
 }
+ 
 
+ 
 .container {
   background-color: rgba(255, 255, 255, 0.774);
   border: 1px solid #e6e6e6;
@@ -164,4 +167,44 @@ input[type=submit]:hover:before,input[type=submit]:hover:after,button:hover:befo
   width:100%;
   transition:800ms ease all;
 }
+img {
+ border-radius: 8px;
+ margin: 20px 20px;
+margin-bottom: 50px;
+}
+
+ h2 {
+    font-style: italic;
+    font-size: 3.7rem
+}
+ .link-to-text{
+  font-size: 2.1rem;
+  // width: 390px;
+  // margin: 100px auto;
+  // padding: 10xp;
+  align-items: center;
+  
+ }
+
+ .congratz-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+ }
+ .punishment-container{  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+ .link-to-text1{
+
+  font-size: 2.1rem;
+  // width: 400px;
+  // margin: 100px auto;
+  // padding: 10xp;
+  align-items: center;
+  
+ }
 

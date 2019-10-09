@@ -1,9 +1,9 @@
 # iPromise -- created by:
 
-Chuan Cheng - https://github.com/nervecell23
-Evelina Clayton - https://github.com/EvelinaClayton
-Hanna Aikas - https://github.com/HannaAikas  
-Imane Ben-touhami - https://github.com/monmon8 
+Chuan Cheng - https://github.com/nervecell23  
+Evelina Clayton - https://github.com/EvelinaClayton   
+Hanna Aikas - https://github.com/HannaAikas    
+Imane Ben-touhami - https://github.com/monmon8   
 Lauren Harris - https://github.com/LaurenLau   
    
 To see the app in action, please visit:

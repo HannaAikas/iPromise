@@ -7,25 +7,29 @@ Imane Ben-touhami - https://github.com/monmon8
 Evelina Clayton - https://github.com/EvelinaClayton
 
 
-To visit iPromise:
+To see the app in action, please visit:
 
-...TO BE EDITED - URL...
+https://cryptic-thicket-87200.herokuapp.com/sign_in
 
 ## What is iPromise?
 
-iPromise is a Web App (including mobile version) that let's users to make a promise and nominate a friend to keep them accountable. If the promise is not met then the user receives a punishment that was chosen during promise selection.
+| Github link  | Description | Development Timeframe | Technologies used | Testing |
+|:-----------:|:-------------:| :------------:| :------------:| :------------:|
+| [iPromise](https://github.com/nervecell23/iPromise) | Web App: Allows users to make promises for personal improvement and nominated friends keep them accountable. | 2 weeks | Ruby, Ruby on Rails, HTML, CSS, Postgres, Heroku | RSpec, Factory_bot, Travis CI |
 
-This project has the following features:
+This project has the following features: 
 
-* Authentication (Sign up, Log in, Log out)
+* Authentication (Sign-up, Log-in, Log-out)
 
-* Create a new promise
+* Scheduler (to do the countdown)
 
-* Edit existing promises
+* A user can create and edit a new promise
 
-* A user can nominate friend to keep them accountable for the promise made using text messages
+* A user can nominate friend to keep them accountable for the promise made
 
-* etc.
+* A user recieves helpful text message to check on their promise and its progress as well as an encouraging reminder
+
+* The web app has 'Congratulations you kept your promise' and 'Oh no! You broke your promise' pages
 
 ## Quick start
 

@@ -50,7 +50,10 @@ class Reminder
     # check and send out reminder
     if current_time - promise.last_reminder_time.to_time > one_day_timedifference
       puts "Sending reminder..."
-      @text_sender.send_text(user_mobile, "Here is your promise: #{promise.text}")
+      promise_content = promise.text
+      promise_content = promise.other_text if promise_content == 'Other'
+
+      @text_sender.send_text(user_mobile, "Here is your promise: #{promise_content}")
       promise.last_reminder_time = current_time
       promise.save
       puts "reminder sent"

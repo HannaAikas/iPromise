@@ -13,9 +13,9 @@
 <h2 class="promises">Here are your promises:</h1>
     <% @promises.each do |promise| %>
       <% if promise.text == 'Other'%>
-        <li><%= promise.other_text %></li>
+        <p><%= promise.other_text %></p>
       <% else %>
-        <li><%= promise.text %></li>
+        <p><%= promise.text %></p>
       <% end %>
     <% end %>
 

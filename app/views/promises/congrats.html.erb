@@ -2,10 +2,9 @@
 <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
 
 <div class="congratz-container">
-  <h2 align="center">Congratulations <%= current_user.firstname %>, you kept your promise :</h2>
+  <h2 align="center">Congrats <%= current_user.firstname %>, you kept your promise:</h2>
   <h3 align="center">I promise <%=@promise.text%></h3>
   <h2 align="center">You're awesome!</h2>
-  <h3 align="center">Would you like to make a new promise? </h2>
    <div class="link-to-text">
    <%= link_to 'create a new promise', new_promise_path%>
    </div>

@@ -4,9 +4,9 @@
 <div class="congratz-container">
   <h2 align="center">Congrats <%= current_user.firstname %>, you kept your promise:</h2>
   <% unless @promise.text == 'Other' %>
-    <h3 align="center">I promise <%=@promise.text%></h3>
+    <h3 align="center">Here's your promise: <%=@promise.text%></h3>
     <% else %>
-    <h3 align="center">I promise <%=@promise.other_text%></h3>
+    <h3 align="center">Here's your promise: <%=@promise.other_text%></h3>
   <% end %>
   <h2 align="center">You're awesome!</h2>
    <div class="link-to-text">

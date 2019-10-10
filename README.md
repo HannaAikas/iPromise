@@ -34,13 +34,11 @@ This project has the following features:
 
 * In the background, the app has a database that stores details of users and their promises
 
-* There is also a separate “scheduler” program that talks to this database, checks when it is time to send out a text message, and sends an appropriate text message
+* There is also a separate “reminder” program that talks to this database, periodically checks when it is time to send out a text message, and sends an appropriate text message
 
 * Users will receive a daily text message reminding them of their promise
 
 * On the end date of the promise, they will receive a text message asking them to click a link to confirm whether or not they kept their promise. This will open the app on their mobile phone browser, ask them to log in, and then show them either the “congratulations” page, or the page that reminds them of their “punishment” for breaking the promise.
-
-* The scheduler is contained in a separate repo: https://github.com/HannaAikas/scheduler 
 
 ## Quick start
 

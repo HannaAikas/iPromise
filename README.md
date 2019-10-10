@@ -16,7 +16,8 @@ https://cryptic-thicket-87200.herokuapp.com/sign_in
 | :-------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: | :--------------------: | :----------------------------------: | :---------------------------------------------: |
 | [iPromise](https://github.com/nervecell23/iPromise) | Web App: Allows users to make promises for personal improvement and set an appropriate “punishment” if they fail to keep these. |        2 weeks         | Ruby on Rails, HTML, CSS, PostgreSQL | RSpec, Factory_bot, Capybara, Travis CI, Heroku |
 
-This project has the following features:
+## This project has the following features:
+
 
 **Top-level diagram**
 

@@ -86,8 +86,12 @@ GEM
       bcrypt
       email_validator (~> 1.4)
       railties (>= 3.1)
+    clockwork (2.0.4)
+      activesupport
+      tzinfo
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
+    connection_pool (2.2.2)
     crass (1.0.4)
     diff-lcs (1.3)
     docile (1.3.2)
@@ -100,6 +104,8 @@ GEM
     factory_bot_rails (5.1.0)
       factory_bot (~> 5.1.0)
       railties (>= 4.2.0)
+    faraday (0.17.0)
+      multipart-post (>= 1.2, < 3)
     ffi (1.11.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -110,6 +116,7 @@ GEM
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
     json (2.2.0)
+    jwt (2.2.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -127,6 +134,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.12.2)
     msgpack (1.3.1)
+    multipart-post (2.1.1)
     nio4r (2.5.2)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
@@ -143,6 +151,8 @@ GEM
     public_suffix (4.0.1)
     puma (3.12.1)
     rack (2.0.7)
+    rack-protection (2.0.7)
+      rack
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -182,6 +192,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    redis (4.1.3)
     rspec-core (3.8.2)
       rspec-support (~> 3.8.0)
     rspec-expectations (3.8.4)
@@ -228,6 +239,11 @@ GEM
     selenium-webdriver (3.142.5)
       childprocess (>= 0.5, < 3.0)
       rubyzip (>= 1.2.2)
+    sidekiq (5.2.7)
+      connection_pool (~> 2.2, >= 2.2.2)
+      rack (>= 1.5.0)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.5, < 5)
     simplecov (0.17.1)
       docile (~> 1.1)
       json (>= 1.8, < 3)
@@ -254,6 +270,10 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
+    twilio-ruby (5.27.1)
+      faraday (~> 0.9)
+      jwt (>= 1.5, <= 2.5)
+      nokogiri (>= 1.6, < 2.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode-display_width (1.6.0)
@@ -282,6 +302,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   clearance
+  clockwork
   factory_bot_rails
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
@@ -296,11 +317,13 @@ DEPENDENCIES
   rubocop-rails
   sass-rails (~> 5)
   selenium-webdriver
+  sidekiq (= 5.2.7)
   simplecov
   simplecov-console
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
+  twilio-ruby
   tzinfo-data
   web-console (>= 3.3.0)
   webpacker (~> 4.0)

@@ -1,3 +1,5 @@
+require 'date'
+
 class PromisesController < ApplicationController
   before_action :require_login
 
@@ -17,13 +19,15 @@ class PromisesController < ApplicationController
     @promise.punishment = promise_params.delete(:punishment)
     @promise.other_punishment = promise_params.delete(:other_punishment)
     @promise.user_id = current_user.id
+    @promise.last_reminder_time = DateTime.now
+    @promise.status = true
     @promise.save!
 
     redirect_to promises_path
   end
 
   def promise_params
-    params.require(:promise).permit(:text, :other_text, :end_datetime, :interval, :punishment, :other_punishment)  
+    params.require(:promise).permit(:text, :other_text, :end_datetime, :interval, :punishment, :other_punishment)
   end
 
   def congrats
@@ -40,7 +44,7 @@ class PromisesController < ApplicationController
 
   def update
     @promise = Promise.find(params[:id])
-    permitted_columns = params.require(:promise).permit(:text, :other_text, :end_datetime, :interval, :punishment, :other_punishment)  
+    permitted_columns = params.require(:promise).permit(:text, :other_text, :end_datetime, :interval, :punishment, :other_punishment)
     @promise.update(permitted_columns)
 
     redirect_to promises_path

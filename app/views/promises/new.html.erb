@@ -1,23 +1,70 @@
+
+<head>
+<script>
+  $(document).ready(function(){
+    $("#other_promise").hide();
+    $('#promise_text').on('change', function() {
+      if ( this.value == 'Other') {
+        $("#other_promise").show();
+      } else {
+        $("#other_promise").hide();               
+      }
+    });
+    $("#other_punishment").hide();
+    $('#promise_punishment').on('change', function() {
+      if ( this.value == '') {
+        $("#other_punishment").show();
+      } else {
+        $("#other_punishment").hide();
+      }
+    });
+  });
+</script>
+</head>
+
 <div class='container' id='create-promise'>
 <h1 class='logo'>iPromise</h1>
-
 <h2>Create a new promise</h2>
 
 <%= form_for :promise, url: promises_path do |form| %>
-  <%= form.label :text, 'I promise...' %>
-  <%= form.text_field :text %>
-  <br>
-  <%= form.label :interval, 'How often do you want to receive reminder?' %>
-  <%= form.text_field :interval, :value => '1 day'%>
-  <br>
-  <%= form.label :end_datetime, 'End date:'%>
-  <%= form.date_field :end_datetime %>
-  <br>
-  <%= form.label :punishment, 'If I break my promise...' %>
-  <%= form.text_field :punishment %>
-  <br>
-  <%= form.submit 'Submit' %>
+
+<div class='subheading'>What would you like to promise?</div>
+
+<div>
+  <%= form.select(:text, options_for_select([
+    ['', 0], 
+    ['Limit social media to 30 minutes a day', 'limit social media to 30 minutes a day'], 
+    ['Limit streaming sites to 2 hours a day', 'limit streaming sites to 2 hours a day'], 
+    ['Turn off phone by 8pm every night', 'turn off phone by 8pm every night'],
+    ['Other', 'Other']
+    ])) %>
+</div>
+
+  <div class='other_promise' id="other_promise" >
+    <%= form.label :other_text, 'I promise...' %>
+    <%= form.text_field :other_text %>
+  </div>
+
+<div class='subheading'>Select a punishment</div>
+
+  <%= form.select(:punishment, options_for_select([
+    [' ', 0], 
+    ['Donate £50 to charity', 'donate £50 to charity'], 
+    ['Other', '']
+    ])) %>
+
+<div class='other_punishment' id="other_punishment" >
+  <%= form.label :other_punishment, 'If I break my promise...' %>
+<%= form.text_field :other_punishment %>
+</div>
+<br>
+<%= form.label :end_datetime, 'End date:'%>
+<%= form.date_field :end_datetime %>
+<br>
+<%= form.submit 'Submit' %>
 <% end %>
 <%= link_to 'Back', promises_path %>
+
+</div>
 
 </div>

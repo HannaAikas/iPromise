@@ -12,9 +12,11 @@
 <h1 class="name">Hi <%= current_user.firstname %>!</h1>
 <h2 class="promises">Here are your promises:</h1>
     <% @promises.each do |promise| %>
-    <div class="outer">
+      <% if promise.text == 'Other'%>
+        <p><%= promise.other_text %></p>
+      <% else %>
         <p><%= promise.text %></p>
-    </div>
+      <% end %>
     <% end %>
 
 <div id='create'>

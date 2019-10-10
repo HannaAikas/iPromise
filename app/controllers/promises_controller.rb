@@ -11,9 +11,11 @@ class PromisesController < ApplicationController
   def create
     @promise = Promise.new
     @promise.text = promise_params.delete(:text)
+    @promise.other_text = promise_params.delete(:other_text)
     @promise.end_datetime = promise_params.delete(:end_datetime)
     @promise.interval = promise_params.delete(:interval)
     @promise.punishment = promise_params.delete(:punishment)
+    @promise.other_punishment = promise_params.delete(:other_punishment)
     @promise.user_id = current_user.id
     @promise.save!
 
@@ -21,7 +23,7 @@ class PromisesController < ApplicationController
   end
 
   def promise_params
-    params.require(:promise).permit(:text, :end_datetime, :interval, :punishment)
+    params.require(:promise).permit(:text, :other_text, :end_datetime, :interval, :punishment, :other_punishment)  
   end
 
   def congrats
@@ -38,7 +40,7 @@ class PromisesController < ApplicationController
 
   def update
     @promise = Promise.find(params[:id])
-    permitted_columns = params.require(:promise).permit(:text, :interval, :end_datetime, :punishment)
+    permitted_columns = params.require(:promise).permit(:text, :other_text, :end_datetime, :interval, :punishment, :other_punishment)  
     @promise.update(permitted_columns)
 
     redirect_to promises_path

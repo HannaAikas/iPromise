@@ -6,9 +6,13 @@ Hanna Aikas - https://github.com/HannaAikas
 Imane Ben-touhami - https://github.com/monmon8  
 Lauren Harris - https://github.com/LaurenLau
 
-To see the app in action, please visit:
+## IMPORTANT NOTICE
+If testing the app, please speak with one of the team members and ask for pre-existing sign-in details. Do not input a real mobile phone number, and do not create any new promises on the site. This is important because, for the purposes of the Demo Day, we set up the app to send text messages every 2 minutes (rather than once a day per normal).
+
+The app has been deployed on heroku:
 
 https://cryptic-thicket-87200.herokuapp.com/sign_in
+
 
 ## What is iPromise?
 
